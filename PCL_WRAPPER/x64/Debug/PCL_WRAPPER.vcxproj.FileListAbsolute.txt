@@ -1,0 +1,3 @@
+D:\Repos\PCL_Converter_new\PCL_WRAPPER\x64\Debug\PCL_WRAPPER.vcxproj.AssemblyReference.cache
+D:\Repos\PCL_Converter_new\PCL_WRAPPER\x64\Debug\PCL_WRAPPER.vcxproj.ResolveComReference.cache
+D:\Repos\PCL_Converter_new\PCL_WRAPPER\x64\Debug\PCL_WRAPPER.vcxproj.CopyComplete

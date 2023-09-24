@@ -1,0 +1,10 @@
+^D:\REPOS\PCL_CONVERTER_NEW\CMAKEFILES\0C780E3E3F8DC3C1C5B055832632520B\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Repos/PCL_Converter_new -BD:/Repos/PCL_Converter_new --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Repos/PCL_Converter_new/PCL_CORE.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

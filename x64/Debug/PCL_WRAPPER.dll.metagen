@@ -1,0 +1,121 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly PCL_WRAPPER, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class PCL_CLI.ManagedObject<pcl::PointXYZ>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(pcl.PointXYZ*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    pcl.PointXYZ* Instance 'get set' : 
+  Methods:
+    get_Instance(): PrivateScope, Public, HideBySig, SpecialName
+    set_Instance(PointXYZ*): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class PCL_CLI.PointXYZ: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PCL_CLI.ManagedObject<pcl::PointXYZ>
+    Void .ctor(Single, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single Z   'get set' : 
+    Single Y   'get set' : 
+    Single X   'get set' : 
+  Methods:
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Z(): PrivateScope, Public, HideBySig, SpecialName
+    set_Z(Single): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PCL_CLI.ManagedObject<pcl::Normal>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(pcl.Normal*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    pcl.Normal* Instance 'get set' : 
+  Methods:
+    get_Instance(): PrivateScope, Public, HideBySig, SpecialName
+    set_Instance(Normal*): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class PCL_CLI.Normal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PCL_CLI.ManagedObject<pcl::Normal>
+    Void .ctor(Single, Single, Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Single Normal_Z 'get set' : 
+    Single Normal_Y 'get set' : 
+    Single Normal_X 'get set' : 
+    Single Curvature 'get set' : 
+  Methods:
+    get_Curvature(): PrivateScope, Public, HideBySig, SpecialName
+    set_Curvature(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Normal_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal_X(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Normal_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal_Y(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_Normal_Z(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal_Z(Single): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class PCL_CLI.ManagedObject<pcl::PointCloud<pcl::PointXYZ> >: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(pcl.PointCloud<pcl::PointXYZ>*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    pcl.PointCloud<pcl::PointXYZ>* Instance 'get set' : 
+  Methods:
+    get_Instance(): PrivateScope, Public, HideBySig, SpecialName
+    set_Instance(PointCloud<pcl::PointXYZ>*): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class PCL_CLI.PointCloudXYZ: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PCL_CLI.ManagedObject<pcl::PointCloud<pcl::PointXYZ> >
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    PCL_CLI.PointXYZ Item [Int32] 'get ' : 
+    Int32 Size 'get ' : 
+  Methods:
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Pushback(PointXYZ): PrivateScope, Public, HideBySig
+Class PCL_CLI.ManagedObject<pcl::PointCloud<pcl::Normal> >: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(pcl.PointCloud<pcl::Normal>*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    pcl.PointCloud<pcl::Normal>* Instance 'get set' : 
+  Methods:
+    get_Instance(): PrivateScope, Public, HideBySig, SpecialName
+    set_Instance(PointCloud<pcl::Normal>*): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class PCL_CLI.PointCloudNormal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PCL_CLI.ManagedObject<pcl::PointCloud<pcl::Normal> >
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    PCL_CLI.Normal Item [Int32] 'get ' : 
+    Int32 Size 'get ' : 
+  Methods:
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Pushback(Normal): PrivateScope, Public, HideBySig
+Class PCL_CLI.ManagedObject<PCL_CORE::Features>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(PCL_CORE.Features*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    PCL_CORE.Features* Instance 'get set' : 
+  Methods:
+    get_Instance(): PrivateScope, Public, HideBySig, SpecialName
+    set_Instance(Features*): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class PCL_CLI.Features: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PCL_CLI.ManagedObject<PCL_CORE::Features>
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    NormalEstimation(PointCloudXYZ, Single): PrivateScope, Public, Static, HideBySig
+Class PCL_CLI.Search: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    KdTreeKNNSearch(Int32 IsConst, PointCloudXYZ, Int32 IsConst, Single[]&): PrivateScope, Public, Static, HideBySig
