@@ -55,6 +55,57 @@ namespace PCL_CORE {
 		return indices;
 	}
 
+
+	int* Search::kdtree_knn_search(const float* searchPointCoords, const float* inputCloud,
+		const int numPoints, const int k, float* out_distances) {
+		pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_ptr = PCL_CORE::Util::create_pointcloud(inputCloud, numPoints);
+
+		// init kdtree
+		pcl::KdTreeFLANN<pcl::PointXYZ> tree;
+		tree.setInputCloud(cloud_ptr);
+
+		// create search point from coordinates
+		pcl::PointXYZ searchPt;
+		searchPt.x = *searchPointCoords;
+		searchPt.y = *(searchPointCoords + 1 );
+		searchPt.z = *(searchPointCoords+2);
+
+		// K-nearest neighbor search
+		std::vector<int> neighborIndices(k);
+		std::vector<float> neighborSquaredDistances(k);
+
+		std::cout << "K nearest neighbor search at (" << searchPt.x
+			<< " " << searchPt.y
+			<< " " << searchPt.z
+			<< ") with K=" << k << std::endl;
+
+		// if neighbors were found
+		if (tree.nearestKSearch(searchPt, k, neighborIndices, neighborSquaredDistances) > 0) {
+			for (std::size_t i = 0; i < neighborIndices.size(); ++i)
+				std::cout << "    " << (*cloud_ptr)[neighborIndices[i]].x
+				<< " " << (*cloud_ptr)[neighborIndices[i]].y
+				<< " " << (*cloud_ptr)[neighborIndices[i]].z
+				<< " (squared distance: " << neighborSquaredDistances[i] << ")" << std::endl;
+			int* indices = new int[k];
+
+			for (int i = 0; i < k; i++)
+				indices[i] = neighborIndices[i];
+
+			float* dists = new float[k];
+			std::cout << "Distances CPP:\n";
+			for (int i = 0; i < k; i++) {
+				out_distances[i] = neighborSquaredDistances[i];
+
+				std::cout << out_distances[i] << std::endl;
+			}
+
+
+			return indices;
+		}
+		// if no neighbor were found: 
+		return nullptr;
+	}
+
 	int* Search::kdtree_radius_search(const int searchPtIdx, const float* inputCloud,
 		const int numPoints, const float r, float* out_distances) {
 

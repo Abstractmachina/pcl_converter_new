@@ -2,7 +2,7 @@
 
 namespace PCL_CLI {
 
-	// Native Conversions
+	// CPP (native) Conversions
 	float* Convert_To_NativeFloatArray(array<float>^ input) {
 		pin_ptr<float> array_pin = &input[0];
 		float* nativeArray = array_pin;
