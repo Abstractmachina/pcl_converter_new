@@ -1,6 +1,8 @@
 CMakeFiles/
 PCL_CORE/x64/
 PCL_WRAPPER/x64/
+Sandbox/bin/
+Sandbox/obj/
 
 
 # Visual Studio 2015/2017 cache/options directory
