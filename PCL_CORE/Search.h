@@ -17,6 +17,7 @@ namespace PCL_CORE {
 		/// <returns></returns>
 		static int* kdtree_knn_search(const int searchPtIdx, const float* pointCloud,
 			const int numPoints, const int k, float* out_distances);
+
 		/// <summary>
 		/// search k nearest neighbors around a specified search point.
 		/// </summary>
@@ -26,9 +27,22 @@ namespace PCL_CORE {
 		/// <param name="k"></param>
 		/// <param name="out_distances"></param>
 		/// <returns></returns>
-		static int* kdtree_knn_search(const float* searchPointCoords, const float* pointCloud,
+		static std::vector<int> kdtree_knn_search(const float* searchPointCoords, const float* pointCloud,
 			const int numPoints, const int k, float* out_distances);
+
+		/// <summary>
+		/// search k nearest neighbors based on distance defined as radius.
+		/// </summary>
+		/// <param name="searchPt"></param>
+		/// <param name="pointCloud"></param>
+		/// <param name="numPoints"></param>
+		/// <param name="r"></param>
+		/// <param name="out_distances"></param>
+		/// <returns></returns>
 		static int* kdtree_radius_search(const int searchPt, const float* pointCloud,
+			const int numPoints, const float r, float* out_distances);
+
+		static std::vector<int> kdtree_radius_search(const float* searchPointCoords, const float* pointCloud,
 			const int numPoints, const float r, float* out_distances);
 	};
 
