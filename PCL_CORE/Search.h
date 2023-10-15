@@ -42,8 +42,7 @@ namespace PCL_CORE {
 		static int* kdtree_radius_search(const int searchPt, const float* pointCloud,
 			const int numPoints, const float r, float* out_distances);
 
-		static std::vector<int> kdtree_radius_search(const float* searchPointCoords, const float* pointCloud,
-			const int numPoints, const float r, float* out_distances);
+		static int kdtree_radius_search(const float* searchPointCoords, const float* pointCloud, const int cloudSize, const float radius, std::vector<int> &out_indices, std::vector<float> &out_distances, unsigned int maxNn);
 	};
 
 }

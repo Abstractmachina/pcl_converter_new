@@ -19,6 +19,7 @@ namespace PCL_CLI {
 	array<float>^ Convert_To_ManagedFloatArray(PointCloudXYZ^ inputCloud);
 	array<float>^ Convert_To_ManagedFloatArray(float* input, int length);
 	array<int>^ Convert_To_ManagedIntArray(int* ks, int length);
+	array<int>^ Convert_To_ManagedIntArray(std::vector<int> ks, int length);
 
 
 }

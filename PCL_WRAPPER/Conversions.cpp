@@ -50,4 +50,14 @@ namespace PCL_CLI {
 		return output;
 	}
 
+	array<int>^ Convert_To_ManagedIntArray(std::vector<int> input, int length) {
+
+		auto output = gcnew array<int>(input.size());
+
+		for (int i = 0; i < length; i++) {
+			output[i] = input[i];
+		}
+		return output;
+	}
+
 }

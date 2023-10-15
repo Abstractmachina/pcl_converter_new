@@ -4,6 +4,9 @@ PCL_WRAPPER/x64/
 Sandbox/bin/
 Sandbox/obj/
 
+*.1.tlog
+*.tlog
+
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

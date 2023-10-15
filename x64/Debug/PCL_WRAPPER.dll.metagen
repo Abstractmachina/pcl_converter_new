@@ -120,3 +120,4 @@ Class PCL_CLI.Search: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Methods:
     KdTreeKNNSearch(Single[], PointCloudXYZ, Int32 IsConst, Single[]&): PrivateScope, Public, Static, HideBySig
     KdTreeKNNSearch(Int32 IsConst, PointCloudXYZ, Int32 IsConst, Single[]&): PrivateScope, Public, Static, HideBySig
+    KdTreeRadiusSearch(Single[], PointCloudXYZ, Single IsConst, List`1&, List`1&, UInt32): PrivateScope, Public, Static, HideBySig

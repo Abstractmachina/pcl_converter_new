@@ -5,7 +5,7 @@
 #include "Conversions.h"
 
 namespace PCL_CLI {
-
+	using namespace System::Collections::Generic;
 	
 	public ref class Search {
 	public:
@@ -19,8 +19,11 @@ namespace PCL_CLI {
 		/// <returns></returns>
 		static array<int>^ KdTreeKNNSearch(const int searchPtIdx, PointCloudXYZ^ pointCloud,
 			const int k, array<float>^% out_distances);
+
 		static array<int>^ KdTreeKNNSearch(array<float>^ searchCoords, PointCloudXYZ^ pointCloud,
 			const int k, array<float>^% out_distances);
+
+		static int KdTreeRadiusSearch(array<float>^ searchPointCoords, PointCloudXYZ^ pointCloud, const float radius, List<int>^% out_indices , List<float>^% out_distances, unsigned int maxNn);
 	};
 
 }
