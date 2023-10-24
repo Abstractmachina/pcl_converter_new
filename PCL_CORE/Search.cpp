@@ -57,8 +57,7 @@ namespace PCL_CORE {
 	}
 
 
-	std::vector<int> Search::kdtree_knn_search(const float* searchPointCoords, const float* inputCloud,
-		const int numPoints, const int k, float* out_distances) {
+	std::vector<int> Search::kdtree_knn_search(const float* searchPointCoords, const float* inputCloud, const int numPoints, const int k, float* out_distances) {
 		pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_ptr = PCL_CORE::Util::create_pointcloud(inputCloud, numPoints);
 
 		// init kdtree

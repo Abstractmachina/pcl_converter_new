@@ -80,9 +80,32 @@ namespace Sandbox {
                 }
             }
 
+            // test coordinate search
+
+            bool doTestCoordinateSearch = true;
+            if (doTestCoordinateSearch) {
+                // test search point
+                float[] searchCoords = new float[] { 12.3705371805146f, 37.3011151307264f, 30.9127258563492f };
+
+                int k = 4;
+
+                //out variables
+                var out_indices = new List<int>();
+                var out_distances = new List<float>();
+
+
+                Console.WriteLine("... finding neighbors in search radius ...");
+                var neighborsFound = Search.KdTreeKNNSearch(searchCoords, cloudXYZ, k, ref out_distances);
+
+                Console.WriteLine($"{neighborsFound} neighbors found!");
+                for (int i = 0; i < neighborsFound.Length; i++) {
+                    Console.WriteLine($"index: {neighborsFound[i]}, distance: {out_distances[i]}");
+                }
+            }
+
             // test radius search
 
-            bool doTestRadiusSearch = true;
+            bool doTestRadiusSearch = false;
             if (doTestRadiusSearch) 
             {
                 // test search point
